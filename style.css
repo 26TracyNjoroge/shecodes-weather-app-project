@@ -1,0 +1,25 @@
+:root {
+    --blue-light: #8894BE;
+    --blue-dark: #5263A9;
+    --white-color: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue-light);
+    color: var(--white-color);
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--blue-dark);
+    border-radius: 6px;
+    margin-top: 20px;
+}
