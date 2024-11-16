@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
-    --blue-light: #8894BE;
-    --blue-dark: #5263A9;
-    --white-color: #FFFFFF;
+    --blue-light-body: #8894BE;
+    --blue-dark-container: #5F71B9;
+    --blue-input: #5B69A8;
+    --blue-search-btn: #4C5DA2;
+    --white: #FFFFFF;
+
 }
 
 * {
@@ -11,15 +16,43 @@
 }
 
 body {
-    background-color: var(--blue-light);
-    color: var(--white-color);
+    background-color: var(--blue-light-body);
+    color: var(--white);
+    font-family: "Roboto", serif;
 }
 
 .container {
     width: 600px;
     margin: 0 auto;
     padding: 30px;
-    background-color: var(--blue-dark);
-    border-radius: 6px;
+    background-color: var(--blue-dark-container);
+    border-radius: 16px;
     margin-top: 20px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+.search-form {
+    margin-bottom: 22px;
+
+}
+
+.search-form-input {
+    background-color: var(--blue-input);
+    border: none;
+    border-radius: 6px;
+    padding: 15px 20px;
+    width: 80%;
+    color: #B3BBE2;
+}
+
+::placeholder {
+    color: var(--white);
+  }
+
+.search-form-btn {
+    background-color: var(--blue-search-btn);
+    color: var(--white);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 6px;
 }
