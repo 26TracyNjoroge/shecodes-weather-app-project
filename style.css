@@ -29,26 +29,12 @@ body {
     background-color: var(--blue-light-body);
     color: var(--white);
     font-family: "Be Vietnam Pro", sans-serif;
-    height: 100vh; /* Ensures the body takes the full height of the viewport */
+    height: 100vh; 
     display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-    margin: 0; /* Removes any default margin */
+    align-items: center; 
+    justify-content: center; 
+    margin: 0; 
 }
-
-.container {
-    width: 600px;
-    padding: 30px;
-    background-color: var(--blue-dark-container);
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgb(25, 23, 21);
-}
-/* 
-body {
-    background-color: var(--blue-light-body);
-    color: var(--white);
-    font-family: "Be Vietnam Pro", sans-serif;
-} */
 
 header {
     border-bottom: 1px solid var(--blue-input);
@@ -68,15 +54,13 @@ a:hover {
     text-decoration: none;
 }
 
-/* .container {
+.container {
     width: 600px;
-    margin: 0 auto;
     padding: 30px;
     background-color: var(--blue-dark-container);
     border-radius: 16px;
-    margin-top: 88px;
     box-shadow: 0 4px 12px rgb(25, 23, 21);
-} */
+}
 
 .search-form {
     margin-bottom: 28px;
