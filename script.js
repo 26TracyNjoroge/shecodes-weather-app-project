@@ -4,7 +4,8 @@ function updateWeather(response) {
     let descriptionEl = document.querySelector("#weather-description");
     let humidityEl = document.querySelector("#humidity");
     let windSpeedEl = document.querySelector("#wind-speed");
-    let dateEl = document.querySelector("#weather-date")
+    let dateEl = document.querySelector("#weather-date");
+    let iconEl = document.querySelector("#icon");
 
     let timestamp = response.data.time; 
     let date = new Date(timestamp * 1000);
@@ -14,6 +15,8 @@ function updateWeather(response) {
     let description = response.data.condition.description;
     let humidity = `${response.data.temperature.humidity}%`;
     let windSpeed = `${response.data.wind.speed}km/h`;
+    let icon = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
 
     dateEl.innerHTML = formatDate(date);
     descriptionEl.innerHTML = description;
@@ -21,6 +24,7 @@ function updateWeather(response) {
     temperatureEl.innerHTML = currentTemp;
     humidityEl.innerHTML = humidity;
     windSpeedEl.innerHTML = windSpeed;
+    iconEl.innerHTML = icon;
 
     console.log(date);
     console.log(response.data.time)

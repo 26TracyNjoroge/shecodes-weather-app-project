@@ -56,7 +56,7 @@ a:hover {
 }
 
 .container {
-    width: 600px;
+    width: 630px;
     padding: 30px;
     background-color: var(--blue-dark-container);
     border-radius: 16px;
@@ -119,20 +119,22 @@ a:hover {
 
 .weather-app-temperature {
     display: flex;
+    margin-top: 24px;
+    justify-content: flex-end;
 }
 
 .weather-icon {
-    margin-top: 22px;
-    font-size: 44px;
+    width: 88px;
+    height: 88px;
 }
 
 .weather-temperature-value {
     font-size: 88px;
-    margin-left: 10px;
+    line-height: 88px;
 }
 
 .weather-temperature-unit {
-    margin-top: 16px;
+    margin-top: 6px;
     font-size: 28px;
 }
 
