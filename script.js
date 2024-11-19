@@ -1,5 +1,4 @@
 function updateWeather(response) {
-    let timestamp = response.data.time; 
     let temperatureEl = document.querySelector("#weather-temperature-value");
     let cityEl = document.querySelector("#weather-app-city");
     let descriptionEl = document.querySelector("#weather-description");
@@ -7,6 +6,7 @@ function updateWeather(response) {
     let windSpeedEl = document.querySelector("#wind-speed");
     let dateEl = document.querySelector("#weather-date")
 
+    let timestamp = response.data.time; 
     let date = new Date(timestamp * 1000);
 
     let currentTemp = Math.round(response.data.temperature.current);
@@ -15,7 +15,7 @@ function updateWeather(response) {
     let humidity = `${response.data.temperature.humidity}%`;
     let windSpeed = `${response.data.wind.speed}km/h`;
 
-    dateEl.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    dateEl.innerHTML = formatDate(date);
     descriptionEl.innerHTML = description;
     cityEl.innerHTML = city;
     temperatureEl.innerHTML = currentTemp;
@@ -24,6 +24,30 @@ function updateWeather(response) {
 
     console.log(date);
     console.log(response.data.time)
+}
+
+function formatDate(date) {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let days = [
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday"
+    ];
+    let day = days[date.getDay()];
+
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+
+    return `${day} ${hours}:${minutes}`
 }
 
 function searchCity(city) {
