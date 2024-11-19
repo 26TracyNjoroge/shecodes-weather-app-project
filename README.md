@@ -6,8 +6,8 @@
 ### Features
 
 * **Search Functionality**: Enter a city name to retrieve and display current weather data.
-**Real-Time Weather Updates**: Displays city, temperature, humidity, wind speed, and a weather description.
-**API Integration**: Uses the SheCodes Weather API for accurate weather data.
+* **Real-Time Weather Updates**: Displays city, temperature, humidity, wind speed, and a weather description.
+* **API Integration**: Uses the SheCodes Weather API for accurate weather data.
 
 
 ### Technologies Used
